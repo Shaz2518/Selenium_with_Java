@@ -27,7 +27,7 @@ public class AddToCart_Demo {
 
 		// Adding Multiple Item to Cart
 		int j=0;
-		String veggies[] = { "Brocolli", "Cucumber", "Carrot" };
+		String veggies[] = { "Brocolli", "Cucumber", "Carrot","Beetroot","Almonds", "Pista" };
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 		List<WebElement> products = driver.findElements(By.cssSelector("h4.product-name"));
 
@@ -39,9 +39,9 @@ public class AddToCart_Demo {
 
 			if (veggiesNeeded.contains(newName)) {
 				j++;
-				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
 				
-				if(j==3)
+				if(j==veggies.length)
 				{break;}
 
 			}
