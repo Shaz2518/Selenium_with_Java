@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.WebElement;
 
-public class AddToCart_Demo {
+public class CartCheckout_ImplicitWait {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.msedge.driver",
@@ -24,17 +24,20 @@ public class AddToCart_Demo {
 		for (int i = 0; i < products.size(); i++) {
 			String names[] = products.get(i).getText().split("-");
 			String newName = names[0].trim();
-
 			List veggiesNeeded = Arrays.asList(veggies);
 
 			if (veggiesNeeded.contains(newName)) {
 				j++;
 				driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
-
 				if (j == veggies.length) {
 					break;
 				}
 			}
 		}
+		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+		driver.findElement(By.xpath("//button[text()='PROCEED TO CHECKOUT']")).click();
+		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector("button.promoBtn")).click();
+		System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText());
 	}
 }
