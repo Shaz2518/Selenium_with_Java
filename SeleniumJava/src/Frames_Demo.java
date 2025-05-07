@@ -23,6 +23,8 @@ public class Frames_Demo {
 		Actions dragDrop = new Actions(driver);
 		dragDrop.dragAndDrop(source, target).build().perform();
 		
+		driver.switchTo().defaultContent();
+		
 		
 		
 		
