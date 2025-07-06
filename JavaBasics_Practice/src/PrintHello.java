@@ -9,7 +9,7 @@ public class PrintHello {
 		
 		System.out.println("Hello " + name + " " + "Have a nice Day..!!");
 		
-		
+		scr.close();
 	}
 
 }

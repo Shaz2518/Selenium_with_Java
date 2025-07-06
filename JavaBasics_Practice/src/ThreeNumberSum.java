@@ -11,6 +11,8 @@ public class ThreeNumberSum {
 		
 		int sum = num1 + num2 + num3;
 		System.out.println("Sum of 3 numbers are: " + sum);
-	}
-
+	
+		scr.close();
+		}
+	
 }

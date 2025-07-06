@@ -9,6 +9,7 @@ public class NumberIsInteger {
 		
 		System.out.println(num);
 		
+		scr.close();
 		
 	}
 

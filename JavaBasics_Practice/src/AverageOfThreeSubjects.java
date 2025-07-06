@@ -14,6 +14,7 @@ public class AverageOfThreeSubjects {
 		int avg = (sum/3);
 		
 		System.out.println("Average of 3 subject: " + avg);
+		scr.close();
 		
 	}
 
