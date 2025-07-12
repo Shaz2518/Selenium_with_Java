@@ -13,7 +13,7 @@ public class Star_Pyramid {
 		 *    * * * * * * *
 		 *  * * * * * * * * *  
 		 */
-		//Method 1
+		//Method 1 - 3 loops
 		for (int i=1; i<=rows; i++)
 		{
 			for (int j= 1; j<=rows-i; j++)
@@ -32,7 +32,7 @@ public class Star_Pyramid {
 			
 		}
 		System.out.println();
-		//Method 2
+		//Method 2- Printing like AP
 		for(int i=1; i<=rows; i++)
 		{
 			for (int j= 1; j<=rows-i; j++)
@@ -41,7 +41,7 @@ public class Star_Pyramid {
 			}
 			for(int j=1; j<=2*i-1; j++)
 			{
-				System.out.print("*" + " ");
+				System.out.print((char)(j+64) + " ");
 			}
 			System.out.println();
 			
