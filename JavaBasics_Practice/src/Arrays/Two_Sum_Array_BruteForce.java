@@ -3,8 +3,8 @@ package Arrays;
 public class Two_Sum_Array_BruteForce {
 
 	public static void main(String[] args) {
-		int[] arr = { 83, 11, 38, 69, 72, 15 };
-		int num = 80;
+		int[] arr = { 1, 3, 5 ,7 ,9};
+		int num = 12;
 		int[] ans = new int[2];
 
 		// Two Sum
